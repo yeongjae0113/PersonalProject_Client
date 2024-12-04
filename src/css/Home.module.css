@@ -3,6 +3,8 @@
     width: 70%;
     margin: 0 auto;
     flex: 1; /* 공간을 차지하도록 설정 */
+    background-color: white;
+    padding: 10px 30px;
 }
 
 .chatList {
@@ -47,4 +49,10 @@
     padding: 10px 20px; /* 패딩 */
     cursor: pointer; /* 마우스 커서 변경 */
     height: 40px; /* 높이 설정 */
+}
+
+.chatFont {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 50px;
 }

@@ -63,7 +63,7 @@ const Home = () => {
                             sendMessages={sendMessage}
                         />
                     ) : (
-                        <div>채팅방 선택하셈</div>
+                        <div className={styles.chatFont}>채팅방을 선택하세요</div>
                     )}
                 </div>
             </div>

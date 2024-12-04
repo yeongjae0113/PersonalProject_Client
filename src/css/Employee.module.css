@@ -10,8 +10,9 @@
 .profileDiv {
     display: flex;
     width: 100%;
-    background-color: aliceblue;
+    background-color: #f5f5f5;
     padding: 5px 0;
+    border-radius: 8px;
 }
 .profile {
     width: 20%;
@@ -27,9 +28,16 @@
 
 .department {
     width: 100%;
+    background-color: white;
 }
 .department1,.department2, .department3 {
-    width: 33%;
+    width: 32.9%;
+    background-color: #91b0d9;
+    color: white;
+    font-weight: bold;
+    border: none;
+
+    margin: 0 0.5px;
 }
 
 
@@ -70,6 +78,11 @@
 }
 .list {
     width: 100%;
+    background-color: #f5f5f5;
+    /* border: 1px solid black; */
+    border: none;
+    /* border-bottom: 1px solid black; */
+    margin: 0.5px 0;
 }
 .userButtonContainer {
     display: flex;
@@ -78,12 +91,17 @@
 
 .abc {
     justify-content: center;
+    border: none;
 }
 .chatButton {
     flex: 0 0 25%;
     justify-content: center;
-    font-size: 12px;
+    font-size: 13px;
     align-items: center;
     font-weight: bold;
+    background-color: #91b0d9;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
 }
-

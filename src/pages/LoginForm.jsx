@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../css/LoginForm.module.css';
 import axios from 'axios';
 import Header from './Header';
+import Footer from './Footer';
 
 const LoginForm = () => {
     const [userId, setUserId] = useState('');
@@ -126,6 +127,7 @@ const LoginForm = () => {
                             type='number'
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
+                            placeholder='ex) 20'
                         />
                     </div>
                 </div>
@@ -144,7 +146,7 @@ const LoginForm = () => {
                                     setPhoneNumber(value); // 상태 업데이트
                                 }
                             }}
-                            placeholder='전화번호를 입력하세요 (예: 01012345678)'
+                            placeholder='전화번호를 입력하세요 [ex) 01012345678]'
                         />
                     </div>
                 </div>
@@ -180,6 +182,9 @@ const LoginForm = () => {
                     <button className={styles.button} type='submit'>회원가입</button>
                 </div>
             </form>
+            <div className={styles.footer}>
+                <Footer />
+            </div>
         </>
     );
 };

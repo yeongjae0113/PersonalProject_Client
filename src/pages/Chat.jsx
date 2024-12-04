@@ -10,6 +10,7 @@ const Chat = ({ chatRoomId, messageInput, setMessageInput, sendMessages }) => {
     const [isConnected, setIsConnected] = useState(false);
     const [id, setUserId] = useState(null);
     const stompClient = useRef(null);
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         const userInfo = JSON.parse(localStorage.getItem('user'));
@@ -85,7 +86,7 @@ const Chat = ({ chatRoomId, messageInput, setMessageInput, sendMessages }) => {
 
     return (
         <>
-            <h3>채팅방 ID: {chatRoomId}</h3>
+            <div className={styles.chatRoomId}>채팅방 ID: {chatRoomId}</div>
             <div className={styles.messageList}>
                 {messages.map((msg, index) => (
                     <div 

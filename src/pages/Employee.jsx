@@ -62,7 +62,7 @@ const Employee = ({ username, userId, selectChat }) => {
     return (
         <div className={styles.chatDiv}>
             <div className={styles.chatList}>
-                <h3 className={styles.chatListName}>사원</h3>
+                {/* <h3 className={styles.chatListName}></h3> */}
                 <div className={styles.profileDiv}>
                     <img className={styles.profile} src={profile} alt='사진 못불러옴' />
                     <div className={styles.profileName}>{username}</div>

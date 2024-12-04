@@ -16,31 +16,32 @@ const Header = () => {
             setUsername(parsedUser.username);
         }
     }, []);
+
     const handleLogout = () => {
         localStorage.removeItem('user');
         setIsLoggin(false);
         setUsername('');
+        navigate('/');
         alert('로그아웃 성공');
     };
 
     return (
         <div className={styles.container}>
-            <div className={styles.logoDiv} onClick={() => navigate('/')}>
-                <img className={styles.logo} src={logo}></img>
+            <div className={styles.logoDiv} onClick={() => navigate('/home')}>
+                <img className={styles.logo} src={logo} alt="Logo" />
                 <div className={styles.logoName}>Pproject</div>
             </div>
-            {/* <div onClick={() => navigate('/Calendar')}>
-                일정관리
-            </div> */}
             <div className={styles.login}>
                 {isLoggin ? (
-                    <div>
-                        <span>{username}</span>
+                    <div className={styles.userDiv}>
+                        <button className={styles.mypage} onClick={() => navigate('/mypage')}>
+                            마이페이지
+                        </button>
+                        <span className={styles.username}>{username}</span>
                         <button className={styles.logout} onClick={handleLogout}>로그아웃</button>
                     </div>
-                    ) : (
+                ) : (
                     <div>
-                        <button onClick={() => navigate('/login')}>로그인</button>
                     </div>
                 )}
             </div>

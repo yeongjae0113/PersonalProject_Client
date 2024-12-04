@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from '../css/Login.module.css';
 import axios from 'axios';
 import Header from './Header';
+import Footer from './Footer';
 
 const Login = () => {
     const navigate = useNavigate();
@@ -21,7 +22,7 @@ const Login = () => {
             alert('로그인 성공');
             localStorage.setItem('user', JSON.stringify(response.data));
             console.log('localStorage', localStorage)
-            navigate('/');
+            navigate('/home');
         } catch (error) {
             console.error('로그인 실패', error);
             alert('로그인 실패했어');
@@ -58,6 +59,9 @@ const Login = () => {
                     <button className={styles.buttons} onClick={() => navigate('/loginForm')}>회원가입</button>
                 </div>
             </form>
+            <div className={styles.footer}>
+                <Footer/>
+            </div>
         </>
     );
 };
