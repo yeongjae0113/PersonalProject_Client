@@ -1,0 +1,37 @@
+.footerFrame {
+    background-color: #F7F9FA;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20%;
+}
+
+.footerTop {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    /* padding-bottom: 10px; */
+    border-bottom: 1px solid white;
+}
+
+.footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    p {
+        color: #787E89;
+        margin: 0;
+    }
+}
+
+.footerInfoTitle {
+    color: black !important;
+    font-weight: bold;
+}
+
+.socialIconList {
+    display: flex;
+    gap: 20px;
+    a img {
+        width: 20px;
+    }
+}

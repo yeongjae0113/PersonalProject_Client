@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5%;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+.logoDiv {
+    display: flex;
+    flex-direction: column;
+    width: 3.5%;
+    align-items: center;
+    cursor: pointer;
+}
+.logo {
+    width: 50px; /* 로고의 고정 너비 설정 */
+    height: auto; /* 비율 유지 */
+    font-size: 1.5em; /* 글자 크기 조정 */
+}
+.logoName {
+    font-weight: bold;
+    width: 100%;
+}
+.login {
+    margin-left: auto;
+}

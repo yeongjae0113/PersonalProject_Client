@@ -1,0 +1,76 @@
+.login-container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 50px;
+}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input, .select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.radio {
+    margin-bottom: 10px;
+}
+
+.input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.phone-container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+
+.phone-container input {
+    /* width: 30%; */
+    margin-right: 5px;
+}
+
+.numberInput {
+    width: 12%; /* 입력창의 너비를 조정 */
+    padding: 5px; /* 입력창의 높이를 조정 */
+    margin: 0 5px; /* 입력창 간의 간격 */
+    -moz-appearance: textfield; /* Firefox에서 숫자 입력의 증감 버튼 숨기기 */
+    -webkit-appearance: none; /* Chrome/Safari에서 숫자 입력의 증감 버튼 숨기기 */
+}
+
+.button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
