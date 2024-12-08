@@ -41,18 +41,26 @@
     font-weight: bold;
 }
 .userDiv {
-    /* display: flex; */
-    /* align-items: center; */
     height: 30px;
 }
 .mypage {
     width: 120px;
     color: black;
-    margin-right: 50px;
+    margin-right: 80px;
+    font-size: 15px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
-    /* background-color: #91b0d9; */
     height: 30px;
     cursor: pointer;
+}
+.calendar {
+    width: 120px;
+    color: black;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
 }
