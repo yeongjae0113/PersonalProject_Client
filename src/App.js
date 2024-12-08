@@ -6,6 +6,7 @@ import Chat from './pages/Chat';
 import Calendar from './pages/Calendar';
 import MyPage from './pages/MyPage';
 import Change from './pages/Change';
+import AAA from './pages/AAA';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/mypage" element={<MyPage />} />
       <Route path="/change" element={<Change />} />
+      <Route path="/aaa" element={<AAA />} />
     </Routes>
   );
 };

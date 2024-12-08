@@ -34,6 +34,7 @@ const Header = () => {
             <div className={styles.login}>
                 {isLoggin ? (
                     <div className={styles.userDiv}>
+                        <button onClick={() => navigate('/calendar')}>일정 관리</button>
                         <button className={styles.mypage} onClick={() => navigate('/mypage')}>
                             마이페이지
                         </button>

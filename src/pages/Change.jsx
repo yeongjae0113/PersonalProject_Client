@@ -152,7 +152,7 @@ const Change = () => {
                                 className={`${styles.input} ${styles.readOnlyInput}`} // readOnlyInput 클래스 추가
                             />
                         </div>
-                        <button type="submit" className={styles.button}>수정완료</button>
+                        <button type="submit" className={styles.button} onClick={() => navigate("/mypage")}>수정완료</button>
                     </form>
                 </div>
             </div>
