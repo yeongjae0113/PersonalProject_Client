@@ -7,7 +7,7 @@ import styles from '../css/MyPage.module.css';
 
 const MyPage = () => {
     const navigate = useNavigate();
-    const [userData, setUserData] = useState({
+    const [userInfo, setuserInfo] = useState({
         id: '',
         username: '',
         password: '',
@@ -18,10 +18,24 @@ const MyPage = () => {
         position: ''
     });
 
+    // 전화번호 포맷팅 함수
+    const formatPhoneNumber = (phoneNumber) => {
+        if (!phoneNumber) return '';
+        const cleaned = ('' + phoneNumber).replace(/\D/g, ''); // 숫자만 남김
+        const match = cleaned.match(/^(\d{3})(\d{4})(\d{4})$/); // 010-0000-0000 형식에 맞는 패턴
+        if (match) {
+            return `${match[1]}-${match[2]}-${match[3]}`; // 포맷팅
+        }
+        return phoneNumber; // 형식에 맞지 않으면 그대로 반환
+    };
+
     useEffect(() => {
-        const storedUserData = localStorage.getItem('user');
-        if (storedUserData) {
-            setUserData(JSON.parse(storedUserData)); // JSON 파싱하여 상태에 저장
+        const userInfo = localStorage.getItem('userInfo');
+        console.log('로컬 스토리지: ', userInfo);
+        if (userInfo) {
+            const parsedUserInfo = JSON.parse(userInfo);
+            parsedUserInfo.phoneNumber = formatPhoneNumber(parsedUserInfo.phoneNumber)
+            setuserInfo(parsedUserInfo); // JSON 파싱하여 상태에 저장
         } else {
             navigate('/'); // 유저 데이터가 없으면 홈으로 리다이렉트
         }
@@ -32,8 +46,8 @@ const MyPage = () => {
             <Header />
             <div className={styles.container}>
                 <Employee 
-                    username={userData.username}
-                    userId={userData.id}
+                    username={userInfo.username}
+                    userId={userInfo.id}
                 />
                 <div className={styles.form}>
                     <div className={styles.inputGroup}>
@@ -41,8 +55,9 @@ const MyPage = () => {
                         <input
                             type="text"
                             name="username"
-                            value={userData.username}
+                            value={userInfo.username}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -50,8 +65,9 @@ const MyPage = () => {
                         <input
                             type="password"
                             name="password"
-                            value={userData.password}
+                            value={userInfo.password}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -59,9 +75,9 @@ const MyPage = () => {
                         <input
                             type="text"
                             name="gender"
-                            value={userData.gender}
-                            readOnly
+                            value={userInfo.gender}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -69,9 +85,9 @@ const MyPage = () => {
                         <input
                             type="number"
                             name="age"
-                            value={userData.age}
-                            readOnly
+                            value={userInfo.age}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -79,8 +95,9 @@ const MyPage = () => {
                         <input
                             type="text"
                             name="phoneNumber"
-                            value={userData.phoneNumber}
+                            value={userInfo.phoneNumber}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -88,9 +105,9 @@ const MyPage = () => {
                         <input
                             type="text"
                             name="department"
-                            value={userData.department}
-                            readOnly
+                            value={userInfo.department}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div className={styles.inputGroup}>
@@ -98,9 +115,9 @@ const MyPage = () => {
                         <input
                             type="text"
                             name="position"
-                            value={userData.position}
-                            readOnly
+                            value={userInfo.position}
                             className={styles.readOnlyInput}
+                            readOnly
                         />
                     </div>
                     <div>

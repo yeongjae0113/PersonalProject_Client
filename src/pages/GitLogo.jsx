@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../img/logo.png';
 
-const AAA = () => {
+const GitLogo = () => {
     return (
         <>
         <br/>
@@ -17,4 +17,4 @@ const AAA = () => {
     );
 };
 
-export default AAA;
+export default GitLogo;

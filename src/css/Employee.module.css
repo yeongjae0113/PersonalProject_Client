@@ -30,13 +30,13 @@
     width: 100%;
     background-color: white;
 }
-.department1,.department2, .department3 {
+.department1 {
     width: 32.9%;
     background-color: #91b0d9;
     color: white;
     font-weight: bold;
     border: none;
-
+    cursor: pointer;
     margin: 0 0.5px;
 }
 
@@ -92,6 +92,7 @@
 .abc {
     justify-content: center;
     border: none;
+    padding: 3px;
 }
 .chatButton {
     flex: 0 0 25%;

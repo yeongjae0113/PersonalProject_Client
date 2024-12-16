@@ -1,0 +1,71 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalContent {
+    background: #dae6f7 !important;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.h2 {
+    margin-top: -0.1%;
+}
+.input1:focus, .input2:focus, .input3:focus {
+    outline: none;
+}
+.formGroup2 {
+    display: flex;
+    align-items: center;
+    gap: 14%;
+    margin-bottom: 0.5%;
+}
+.formGroup3 {
+    display: flex;
+    align-items: center;
+    gap: 9.6%;
+    margin-bottom: 0.5%;
+}
+.formGroup4 {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-bottom: 0.5%;
+}
+.formGroup {
+
+}
+.input1, .input2, .input3, select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: -3%;
+    margin-top: 2.5%;
+}
+.buttons {
+    color: white;
+    width: 15%;
+    background-color: #91b0d9;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer; 
+    margin-left: 2%;
+}

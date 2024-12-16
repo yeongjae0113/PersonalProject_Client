@@ -6,19 +6,20 @@ import Chat from './pages/Chat';
 import Calendar from './pages/Calendar';
 import MyPage from './pages/MyPage';
 import Change from './pages/Change';
-import AAA from './pages/AAA';
+import Administrators from './pages/Administrators';
+import GitLogo from './pages/GitLogo';
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
       <Route path="/home" element={<Home />} />
-      <Route path="/loginForm" element={<LoginForm />} />
       <Route path="/chat" element={<Chat />} />
       <Route path="/calendar" element={<Calendar />} />
       <Route path="/mypage" element={<MyPage />} />
       <Route path="/change" element={<Change />} />
-      <Route path="/aaa" element={<AAA />} />
+      <Route path="/gitLogo" element={<GitLogo />} />
+      <Route path="/administrators" element={<Administrators />} />
     </Routes>
   );
 };

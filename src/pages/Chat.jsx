@@ -13,7 +13,7 @@ const Chat = ({ chatRoomId, messageInput, setMessageInput, sendMessages }) => {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        const userInfo = JSON.parse(localStorage.getItem('user'));
+        const userInfo = JSON.parse(localStorage.getItem('userInfo'));
         if (userInfo) {
             setUserId(userInfo.id);
         }

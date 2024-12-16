@@ -19,7 +19,7 @@ const Change = () => {
     });
 
     useEffect(() => {
-        const userData = localStorage.getItem('user');
+        const userData = localStorage.getItem('userInfo');
         if (userData) {
             const parsedUser = JSON.parse(userData);
             setFormData(parsedUser);

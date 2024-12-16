@@ -7,18 +7,21 @@ const Header = () => {
     const navigate = useNavigate();
     const [isLoggin, setIsLoggin] = useState(false);
     const [username, setUsername] = useState('');
+    const [role, setRole] = useState('');
 
     useEffect(() => {
-        const user = localStorage.getItem('user');
-        if (user) {
-            const parsedUser = JSON.parse(user);
+        const users = localStorage.getItem('userInfo');
+        const userInfo = users;
+        if (userInfo) {
+            const parsedUser = JSON.parse(userInfo);
             setIsLoggin(true);
             setUsername(parsedUser.username);
+            setRole(parsedUser.role);
         }
     }, []);
 
     const handleLogout = () => {
-        localStorage.removeItem('user');
+        localStorage.removeItem('userInfo');
         setIsLoggin(false);
         setUsername('');
         navigate('/');
@@ -34,6 +37,9 @@ const Header = () => {
             <div className={styles.login}>
                 {isLoggin ? (
                     <div className={styles.userDiv}>
+                        {role === 'ROLE_MASTER' && (
+                            <button className={styles.organization} onClick={() => navigate('/administrators')}>관리자 모드</button>
+                        )}
                         <button className={styles.calendar} onClick={() => navigate('/calendar')}>일정 관리</button>
                         <button className={styles.mypage} onClick={() => navigate('/mypage')}>
                             마이페이지

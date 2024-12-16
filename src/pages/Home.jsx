@@ -15,17 +15,18 @@ const Home = () => {
     const [messageInput, setMessageInput] = useState(''); // 메시지 입력 상태 추가
 
     useEffect(() => {
-        const user = localStorage.getItem('user');
-        if (user) {
-            const parsedUser = JSON.parse(user);
+        const userInfo = localStorage.getItem('userInfo');
+        if (userInfo) {
+            const parsedUser = JSON.parse(userInfo);
             setIsLoggin(true);
             setUsername(parsedUser.username);
             setUserId(parsedUser.id);
+            console.log("userInfo: ", userInfo)
+            console.log("parsedUser.id: ", parsedUser.userId);
         }
     }, []);
-
     const handleLogout = () => {
-        localStorage.removeItem('user');
+        localStorage.removeItem('userInfo');
         setIsLoggin(false);
         setUsername('');
         setUserId(null);
